@@ -19,6 +19,23 @@
 --taransition: all 0.3s linear;
 }
 
+/*---------global css--------*/
+
+html
+{
+    scroll-behavior: smooth;
+}
+a
+{
+    text-decoration: none;
+}
+img
+{
+    width: 100%;
+    display: black;
+}
+
+
 
 .fa-bars 
 {
@@ -96,6 +113,50 @@ body
 {
     background-color: rgb(143, 7, 55);
 }
+
+.clearfix::after,
+.clearfix::before
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.section-center
+{
+    padding: 4rem 0;
+    width: 85%vm;
+    margin: 0 auto;
+    max-width: 1170px;
+
+}
+
+.section-title h3
+{
+    font-family: var(--ff-design);
+    color: rgb(46, 133, 233);
+    font-size: 2rem;
+}
+
+.section-title
+{
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) 
+{
+    .section-center
+    {
+        width:95%;
+        padding: 4rem 1rem;
+    }
+}
+
+
+/*---------navbar---------*/
+
+
+
 
 
 
@@ -243,7 +304,395 @@ margin: 0 auto;
     text-shadow: 0 -5px 10px rgba(255, 69, 0, 0.6), 0 -5px 20px rgba(255, 69, 0, 0.4), 0 -5px 30px rgba(255, 69, 0, 0.2), 0 -5px 40px rgba(255, 69, 0, 0.1);
 }
 }
+
+.content-divider
+{
+    height: 0.5rem;
+    background-image: linear-gradient(to left,var(--clr-secondary), var(--clr-primary-light), var(--clr-secondary));
+}
 /*------------------------features------------*/
 
+.features
+{
+    background-color: var(--clr-grey-3);
+    cursor: pointer;
+}
+.features
+{
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--taransition);
+}
+
+.feature-icon
+{
+    transition: var(--taransition);
+}
+
+.feature-title
+{
+  
+   text-transform: uppercase;
+}
+
+.feature-text
+{
+    color: var(--clr-grey-2);
+    max-width: 17rem;
+    margin: 0 auto;
+
+}
+
+.feature:hover
+{
+    background-color: rgb(179, 207, 216);
+    box-shadow: 0.2px red;
+}
+
+.feature:hover .feature-title{
+    color: var(--clr-primary-light);
+
+}
+
+.feature:hover .feature-icon
+{
+    fill: var(--clr-primary-light);
+}
 
 
+/*---------------one to two line*/
+
+
+@media screen and (min-width: 576px)
+{
+    .feature
+    {
+        width:50%;
+        float: left;
+    }
+}
+    
+@media screen and (min-width: 1200px)
+{
+    .feature
+    {
+        width:25%;
+    }
+}
+
+/**--------------about-----------**/
+.about-img,
+.about-info
+{
+    padding: 2rem 0;
+}
+
+.about-picture-container
+{
+    max-width: 30rem;
+    box-shadow: 0px 3px 5px black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.about-picture
+{
+    transition: var(--taransition);
+}
+
+
+.about-picture-container:hover .about-picture
+{
+    transform: scale(1,2);
+    opacity: 0.5;
+}
+
+.about-text
+{
+    max-width: 26rem;
+    color: var(--clr-grey-2);
+}
+
+@media screen and (min-width: 992px)
+{
+    .about-img,
+    .about-info
+    {
+        float:left;
+        width:50%;
+    }
+    .about-info
+    {
+       padding-left: 2rem; 
+    }
+}
+
+/*-------------products-----------*/
+
+.products
+{
+    background-color: paleturquoise;
+}
+
+.products .product-info
+{
+    padding: 2rem 0;
+}
+
+.product-text
+{
+    color: rgb(247, 79, 79);
+    max-width: 26rem;
+}
+
+.product-img
+{
+    border-radius: 5px;
+    height:500px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+    transform: var(--taransition);
+}
+
+.product-img:hover
+{
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.product-title
+{
+    font-size: 1.02rem;
+}
+
+.product-price
+{
+    color: var(--clr-grey-2);
+    font-size: 1.01rem;
+}
+
+@media screen and (min-width: 768px)
+{
+    .product
+    {
+        float: left;
+        width:50%;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px)
+{
+    .product
+    {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .product-info
+    {
+        float:left;
+        width: 30%;
+    }
+    .product-inventory
+    {
+        float: left;
+        width: 70%;
+    }
+    .product
+    {
+        margin: 0;
+        padding: 0 1rem;
+    }
+}
+
+/*----------service --------*/
+
+.services-title
+{
+    text-align: center;
+    margin: 4rem;
+    margin-bottom: -4rem;
+}
+
+.service-card
+{
+    margin: 2rem 0;
+    background: rgb(197, 191, 191);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px black;
+    cursor: pointer;
+    transition: var(--taransition);
+}
+
+.service-card-hover
+{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px black;
+}
+
+.service-img
+{
+    height: 17rem;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.service-info
+{
+    text-align: center;
+    padding: 3rem 1rem 2.5rem 1rem;
+    
+}
+
+.service-info p
+{
+    max-width: center;
+    margin: 0 auto;
+    color: var(--clr-grey-2);
+}
+
+.service-btn
+{
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    font-weight: 400;
+    margin-top: 1.25rem;
+}
+
+@media screen and (min-width: 768px)
+{
+    .service-card 
+    {
+        width: 45%;
+        float: left;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (min-width: 992px)
+{
+    .service-card 
+    {
+        width: 30%;
+        margin-right: 3.33%;
+    }
+}
+
+/*-------contact us------*/
+
+.contact
+{
+    background-color: rgb(250, 211, 211);
+}
+
+.contact-form,
+.contact-info
+{
+    margin: 1rem 0;
+}
+
+.contact-title
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    margin-bottom: -0.10rem;
+}
+
+.contact-text 
+{
+    color: var(--clr-primary);
+}
+
+.fa-home
+{
+    fill: var(--clr-primary);
+}
+
+.contact-item
+{
+    margin-bottom: 1.25rem;
+}
+
+.contact-form
+{
+    background-color: white;
+    padding: 1.3rem;
+    max-width: 100rem;
+    box-shadow: 0 5px 15px black;
+    border-radius: 5px;
+}
+
+.contact-form h3
+{
+    font-family: var(--ff-design);
+    color:rgb(10, 100, 100);
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.form-group
+{
+    height: 50px;
+    margin-bottom: 50px;
+   
+}
+
+.form-control
+{
+    width: 70%;
+    height: 70%;
+    background-color: none;
+    border: 1px solid var(--clr-grey-2);
+    outline: none;
+    padding: 16px;
+    border-radius: 3px;
+    resize: none;
+    font-family: var(--ff-secondary);
+
+}
+
+textarea.form-control
+{
+    height: 25px;
+}
+
+/*----footer-----*/
+
+.footer
+{
+    background-color: rgb(235, 102, 235);
+    text-align: center;
+}
+
+.fa-facebook-square
+{
+    height: 32px;
+    width: 32px;
+    fill: white;
+}
+
+/*--------scroll bar-----*/
+
+body::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(to bottom , var(--clr-secondary), var(--clr-grey-2));
+}
+
+body::-webkit-scrollbar-track
+{
+    background-color: #be7795;
+}
